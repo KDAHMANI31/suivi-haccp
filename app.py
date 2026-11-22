@@ -124,7 +124,7 @@ def generer_excel_pro(donnees):
             cell.border = thin_border
             cell.font = Font(name="Calibri", size=11)
             
-            # Alignement spécifique selon la colonne
+            # Alignement spécifique selon la colonne (1=Zone, 4=Responsable, 6=Date)
             if col_num in:
                 cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
             else:
