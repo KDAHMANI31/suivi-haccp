@@ -75,7 +75,7 @@ def generer_excel_pro(donnees):
     ws["A1"].font = Font(name="Calibri", size=14, bold=True, color="FFFFFF")
     ws["A1"].fill = PatternFill(start_color="1B365D", end_color="1B365D", fill_type="solid")
     ws["A1"].alignment = Alignment(horizontal="center", vertical="center")
-    ws.row_dimensions.setdefault(1).height = 35
+    ws.row_dimensions[1].height = 35
 
     # En-têtes des colonnes (Ligne 3)
     entetes = ("Zone", "Anomalie constatée", "Action corrective", "Responsable", "Preuve Photo", "Date d'échéance", "Remarque / Statut")
@@ -88,7 +88,7 @@ def generer_excel_pro(donnees):
         bottom=Side(style='thin', color='CBD5E0')
     )
 
-    ws.row_dimensions.setdefault(3).height = 28
+    ws.row_dimensions[3].height = 28
     for col_num, titre in enumerate(entetes, 1):
         cell = ws.cell(row=3, column=col_num, value=titre)
         cell.fill = header_fill
